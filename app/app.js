@@ -38,7 +38,11 @@ sb = new Ext.Application({
                     id: 'datalist',
                     xtype: 'list',
                     store: null,
-                    itemTpl: '<img class="photo" src="{photo_url}" width="40" height="40"/>{name}<br/><img src="{rating_img_url_small}"/>&nbsp;<small>{address1}</small>',
+                    itemTpl:
+                        '<img class="photo" src="http://src.sencha.io/40/40/{photo_url}" width="40" height="40"/>' +
+                        '{name}<br/>' +
+                        '<img src="{rating_img_url_small}"/>&nbsp;' +
+                        '<small>{address1}</small>',
                     listeners: {
                         selectionchange: function (selectionModel, records) {
                             // if selection made, slide to detail card
@@ -85,7 +89,7 @@ sb = new Ext.Application({
                         styleHtmlContent: true,
                         cls: 'detail',
                         tpl: [
-                            '<img class="photo" src="{photo_url}"/>',
+                            '<img class="photo" src="http://src.sencha.io/100/100/{photo_url}" width="100" height="100"/>',
                             '<h2>{name}</h2>',
                             '<div class="info">',
                                 '{address1}<br/>',
