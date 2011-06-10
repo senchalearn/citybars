@@ -40,7 +40,7 @@ cb = new Ext.Application({
                 }, {
                     // the details card
                     id: 'detailCard',
-                    xtype: 'tabpanel',
+                    xtype: 'panel',
                     dockedItems: [{
                         // also has a toolbar
                         dock : 'top',
