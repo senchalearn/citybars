@@ -95,7 +95,7 @@ cb = new Ext.Application({
 
                     cards.setLoading(true); // get the spinner going
     
-                    // then get the nearest city with that geolocation
+                    // get the city, then...
                     cb.getCity(function (city) {
                         
                         // update status bar
