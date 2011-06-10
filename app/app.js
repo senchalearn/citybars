@@ -40,43 +40,13 @@ cb = new Ext.Application({
                 }, {
                     // the details card
                     id: 'detailCard',
-                    xtype: 'tabpanel',
+                    xtype: 'panel',
                     dockedItems: [{
                         // also has a toolbar
                         dock : 'top',
                         xtype: 'toolbar',
-                        title: '',
-                        items: [{
-                            // containing a back button that slides back to list card
-                            text: 'Back',
-                            ui: 'back',
-                            listeners: {
-                                tap: function () {
-                                    cb.cards.setActiveItem(
-                                        cb.cards.listCard,
-                                        {type:'slide', direction: 'right'}
-                                    );
-                                }
-                            }
-                        }]
-                    }],
-                    // textual detail
-                    styleHtmlContent: true,
-                    cls: 'detail',
-                    tpl: [
-                        '<img class="photo" src="{photo_url}" width="100" height="100"/>',
-                        '<h2>{name}</h2>',
-                        '<div class="info">',
-                            '{address1}<br/>',
-                            '<img src="{rating_img_url_small}"/>',
-                        '</div>',
-                        '<div class="phone x-button">',
-                            '<a href="tel:{phone}">{phone}</a>',
-                        '</div>',
-                        '<div class="link x-button">',
-                            '<a href="{mobile_url}">Read more</a>',
-                        '</div>'
-                    ]
+                        title: ''
+                    }]
                 }
             ],
     
