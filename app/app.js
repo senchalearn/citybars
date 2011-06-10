@@ -60,55 +60,23 @@ cb = new Ext.Application({
                             }
                         }]
                     }],
-                    tabBar: {
-                        // the detail card contains two tabs: address and map
-                        dock: 'top',
-                        ui: 'light',
-                        layout: { pack: 'center' }
-                    },
-                    items: [
-                        {
-                            // textual detail
-                            title: 'Contact',
-                            styleHtmlContent: true,
-                            cls: 'detail',
-                            tpl: [
-                                '<img class="photo" src="{photo_url}" width="100" height="100"/>',
-                                '<h2>{name}</h2>',
-                                '<div class="info">',
-                                    '{address1}<br/>',
-                                    '<img src="{rating_img_url_small}"/>',
-                                '</div>',
-                                '<div class="phone x-button">',
-                                    '<a href="tel:{phone}">{phone}</a>',
-                                '</div>',
-                                '<div class="link x-button">',
-                                    '<a href="{mobile_url}">Read more</a>',
-                                '</div>'
-                            ]
-                        },
-                        {
-                            // map detail
-                            title: 'Map',
-                            xtype: 'map',
-                            update: function (data) {
-                                // get centered on bound data
-                                this.map.setCenter(new google.maps.LatLng(data.latitude, data.longitude));
-                                this.marker.setPosition(
-                                    this.map.getCenter()
-                                );
-                                this.marker.setMap(this.map);
-                            },
-                            marker: new google.maps.Marker()
-                        }
-                    ],
-                    update: function(data) {
-                        // updating card cascades to update each tab
-                        Ext.each(this.items.items, function(item) {
-                            item.update(data);
-                        });
-                        this.getDockedItems()[0].setTitle(data.name);
-                    }
+                    // textual detail
+                    styleHtmlContent: true,
+                    cls: 'detail',
+                    tpl: [
+                        '<img class="photo" src="{photo_url}" width="100" height="100"/>',
+                        '<h2>{name}</h2>',
+                        '<div class="info">',
+                            '{address1}<br/>',
+                            '<img src="{rating_img_url_small}"/>',
+                        '</div>',
+                        '<div class="phone x-button">',
+                            '<a href="tel:{phone}">{phone}</a>',
+                        '</div>',
+                        '<div class="link x-button">',
+                            '<a href="{mobile_url}">Read more</a>',
+                        '</div>'
+                    ]
                 }
             ],
     
