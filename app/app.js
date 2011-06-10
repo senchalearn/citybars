@@ -44,7 +44,7 @@ cb = new Ext.Application({
                     // a) the name of the nearest city
                     // b) the local businesses from Yelp
     
-                    // then get the nearest city with that geolocation
+                    // get the city, then...
                     cb.getCity(function (city) {
 
                         // then use Yelp to get the businesses
