@@ -22,20 +22,7 @@ cb = new Ext.Application({
                         id: 'dataList',
                         xtype: 'list',
                         store: null,
-                        itemTpl:
-                            '<img class="photo" src="{photo_url}" width="40" height="40"/>' +
-                            '{name}<br/>' +
-                            '<img src="{rating_img_url_small}"/>&nbsp;' +
-                            '<small>{address1}</small>',
-                        listeners: {
-                            selectionchange: function (selectionModel, records) {
-                                // if selection made, slide to detail card
-                                if (records[0]) {
-                                    cb.cards.setActiveItem(cb.cards.detailCard);
-                                    cb.cards.detailCard.update(records[0].data);
-                                }
-                            }
-                        }
+                        itemTpl: '{name}'
                     }
                 }, {
                     // the details card
