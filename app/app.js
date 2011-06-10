@@ -44,28 +44,14 @@ cb = new Ext.Application({
                     // a) the name of the nearest city
                     // b) the local businesses from Yelp
     
-                    //some useful references
-                    var cards = this;
-                    cards.listCard = cards.getComponent('listCard');
-                    cards.dataList = cards.listCard.getComponent('dataList');
-                    cards.detailCard = cards.getComponent('detailCard');
-
-                    cards.setLoading(true); // get the spinner going
-    
                     // then get the nearest city with that geolocation
                     cb.getCity(function (city) {
-                        
-                        // update status bar
-                        cards.listCard.getDockedItems()[0].setTitle(city + ' ' + BUSINESS_TYPE);
 
                         // then use Yelp to get the businesses
                         cb.getBusinesses(city, function (store) {
 
-                            // then bind data to list and show it
-                            cards.dataList.bindStore(store);
-                            cards.setActiveItem(cards.listCard);
-
-                            cards.setLoading(false); // hide the spinner
+                            // just log for now
+                            console.log(store.data.items);
 
                         });
                     });
