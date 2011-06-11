@@ -1,3 +1,4 @@
 .DS_Store
+.idea
 lib/touch
 theming/.sass-cache
