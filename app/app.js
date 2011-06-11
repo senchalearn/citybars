@@ -1,7 +1,7 @@
 cb = new Ext.Application({
 
     launch: function() {
-        cb.cards = new Ext.Panel({
+        new Ext.Panel({
             layout    : 'card',
             fullscreen: true,
             cardSwitchAnimation: 'slide',
