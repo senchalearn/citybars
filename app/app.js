@@ -60,12 +60,12 @@ cb = new Ext.Application({
                             }
                         }]
                     }],
-tabBar: {
-    // the detail card contains two tabs: address and map
-    dock: 'top',
-    ui: 'light',
-    layout: { pack: 'center' }
-},
+                    tabBar: {
+                        // the detail card contains two tabs: address and map
+                        dock: 'top',
+                        ui: 'light',
+                        layout: { pack: 'center' }
+                    },
                     items: [
                         {
                             // textual detail
