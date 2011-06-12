@@ -17,7 +17,7 @@ cb = new Ext.Application({
                         xtype: 'toolbar',
                         title: 'Please wait' // will get added once loaded
                     }],
-                    items: {
+                    items: [{
                         // the list itself, gets bound to the store programmatically once it's loaded
                         id: 'dataList',
                         xtype: 'list',
@@ -36,7 +36,7 @@ cb = new Ext.Application({
                                 }
                             }
                         }
-                    }
+                    }]
                 }, {
                     // the details card
                     id: 'detailCard',
@@ -60,12 +60,12 @@ cb = new Ext.Application({
                             }
                         }]
                     }],
-                    tabBar: {
-                        // the detail card contains two tabs: address and map
-                        dock: 'top',
-                        ui: 'light',
-                        layout: { pack: 'center' }
-                    },
+tabBar: {
+    // the detail card contains two tabs: address and map
+    dock: 'top',
+    ui: 'light',
+    layout: { pack: 'center' }
+},
                     items: [
                         {
                             // textual detail
