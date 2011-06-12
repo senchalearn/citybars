@@ -17,7 +17,7 @@ cb = new Ext.Application({
                         xtype: 'toolbar',
                         title: 'Please wait' // will get added once loaded
                     }],
-                    items: {
+                    items: [{
                         // the list itself, gets bound to the store programmatically once it's loaded
                         id: 'dataList',
                         xtype: 'list',
@@ -36,7 +36,7 @@ cb = new Ext.Application({
                                 }
                             }
                         }
-                    }
+                    }]
                 }, {
                     // the details card
                     id: 'detailCard',
