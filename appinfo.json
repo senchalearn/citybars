@@ -1,0 +1,10 @@
+{
+    "id": "com.sencha.citybars",
+    "version": "0.0.1",
+    "vendor": "james",
+    "type": "web",
+    "main": "index.html",
+    "title": "CityBars",
+    "icon": "icon.png",
+    "uiRevision": 2
+}
