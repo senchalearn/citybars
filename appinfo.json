@@ -1,7 +1,7 @@
 {
-    "id": "com.sencha.citybars",
+    "id": "com.sencha.learn.citybars",
     "version": "0.0.1",
-    "vendor": "james",
+    "vendor": "Sencha",
     "type": "web",
     "main": "index.html",
     "title": "CityBars",

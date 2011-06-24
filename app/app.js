@@ -1,6 +1,11 @@
 cb = new Ext.Application({
 
     launch: function() {
+        
+        if (typeof PalmSystem !== 'undefined') {
+            PalmSystem.stageReady();
+        }        
+        
         cb.cards = new Ext.Panel({
             layout    : 'card',
             fullscreen: true,
